@@ -67,3 +67,27 @@ ip ospf 1 area 0
 
 interface f0/1
 ip ospf 1 area 0****
+
+
+
+## R2
+
+enable
+configure terminal
+hostname R2
+
+interface f0/0
+ip address 192.168.12.2 255.255.255.0
+no shutdown
+
+interface f0/1
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+
+router ospf 1
+
+interface f0/0
+ip ospf 1 area 0
+
+interface f0/1
+ip ospf 1 area 0
